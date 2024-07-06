@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import logo from './logo.svg';
 import './App.css';
 import Xlogo from "./XLogo.jpg";
@@ -14,57 +14,98 @@ const CopyIcon = () => (
 
 function App() {
   const [copied, setCopied] = useState(false);
+  const { scrollYProgress } = useScroll();
+
+  const memesY = useTransform(scrollYProgress, [0.2, 0.4], [50, 0]);
+  const memesOpacity = useTransform(scrollYProgress, [0.2, 0.4], [0, 1]);
+  
+  const reportY = useTransform(scrollYProgress, [0.6, 0.8], [50, 0]);
+  const reportOpacity = useTransform(scrollYProgress, [0.6, 0.8], [0, 1]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText('soon...');
     setCopied(true);
-    setTimeout(() => {
-      setCopied(false);
-    }, 2000); // Hide the message after 2 seconds
+    setTimeout(() => setCopied(false), 2000);
   };
 
+  const springConfig = { stiffness: 300, damping: 30 };
+
   return (
-    <div>
-      <div className="h-screen w-screen flex justify-center items-center bg-[#F7EAD8]">
+    <motion.div>
+      <motion.div className="h-screen w-screen flex justify-center items-center bg-[#F7EAD8]">
         <div className="absolute top-7 right-7 flex flex-col items-center z-10">
           <div className="flex flex-row">
-            <a href="https://x.com/" className="p-2 hover:scale-110 transition ease-in-out duration-200">
+            <motion.a 
+              href="https://x.com/" 
+              className="p-2"
+              whileHover={{ scale: 1.1 }}
+              transition={springConfig}
+            >
               <img src={Xlogo} alt="Xlogo" className="w-12 h-12 rounded-md" />
-            </a>
-            <a href="https://t.me/" className="p-2 hover:scale-110 transition ease-in-out duration-200">
+            </motion.a>
+            <motion.a 
+              href="https://t.me/" 
+              className="p-2"
+              whileHover={{ scale: 1.1 }}
+              transition={springConfig}
+            >
               <img src={TG} alt="Tg logo" className="w-12 h-12" />
-            </a>
+            </motion.a>
           </div>
         </div>
         <div className='absolute top-[12.5%] md:top-[7.5%] text-6xl md:text-9xl font-custom'>
           <div className='relative'>smarty
-            <img className='absolute -top-8 -left-10 h-[10vh]  md:h-[15vh]' src="grade.png"></img>
+            <img className='absolute -top-8 -left-10 h-[10vh] md:h-[15vh]' src="grade.png" alt="Grade" />
           </div>
         </div>
         <motion.img
           className='h-[50%]'
           src="smarty.png"
+          alt="Smarty"
           whileHover={{ scale: 1.05, rotate: 5 }}
-          transition={{ type: 'spring', stiffness: 300 }}
+          transition={springConfig}
         />
-        <div className='absolute bottom-10 flex justify-center'>
+        <motion.div 
+          className='absolute bottom-10 flex justify-center'
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
           <div className='flex flex-col sm:flex-row justify-center bg-slate-100 rounded-xl md:rounded-full z-10 items-center gap-1 md:gap-3 px-5 py-3 max-w-full border-2 border-slate-400'>
-            <button
+            <motion.button
               onClick={handleCopy}
-              className="text-sm bg-green-600 text-white py-2 px-4 rounded-full md:hover:bg-green-700 border-2 border-white transition-colors duration-300 z-10 whitespace-nowrap"
+              className="text-sm bg-green-600 text-white py-2 px-4 rounded-full border-2 border-white z-10 whitespace-nowrap"
+              whileHover={{ scale: 1.05, backgroundColor: '#16a34a' }}
+              whileTap={{ scale: 0.95 }}
+              transition={springConfig}
             >
               {copied ? 'Copied!' : <CopyIcon />}
-            </button>
+            </motion.button>
             <div className='text-xs sm:text-sm md:text-base overflow-x-auto whitespace-nowrap font-custom'>
               coming soon...
             </div>
           </div>
-        </div>
-      </div>
-      <div className='h-screen w-screen flex justify-center items-center bg-[#F7EAD8]'>
-        <img className='h-[75%]' src="report.png"></img>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+      <motion.div className='h-screen w-screen flex justify-center items-center bg-[#f9f5f0]'>
+        <motion.img 
+          className='w-[60%]' 
+          src="memes.png"
+          alt="Memes"
+          style={{ y: memesY, opacity: memesOpacity }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        />
+      </motion.div>
+      <motion.div className='h-screen w-screen flex justify-center items-center bg-[#F7EAD8]'>
+        <motion.img 
+          className='h-[75%]' 
+          src="report.png"
+          alt="Report"
+          style={{ y: reportY, opacity: reportOpacity }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        />
+      </motion.div>
+    </motion.div>
   );
 }
 
