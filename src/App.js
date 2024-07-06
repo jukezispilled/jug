@@ -90,7 +90,7 @@ function App() {
       <motion.div className='h-screen w-screen flex justify-center items-center bg-[#f9f5f0]'>
         <motion.img 
           className='w-[60%]' 
-          src="memes.png"
+          src="memess.png"
           alt="Memes"
           style={{ y: memesY, opacity: memesOpacity }}
           transition={{ duration: 0.8, ease: "easeOut" }}
