@@ -65,15 +65,12 @@ function App() {
           transition={{ delay: 0.5, duration: 0.5 }}
         >
           <div className='flex flex-col sm:flex-row justify-center bg-slate-100 rounded-xl md:rounded-full z-10 items-center gap-1 md:gap-3 px-5 py-3 max-w-full border-2 border-slate-400'>
-            <motion.button
+            <button
               onClick={handleCopy}
-              className="text-sm bg-green-600 text-white py-2 px-4 rounded-full border-2 border-white z-10 whitespace-nowrap"
-              whileHover={{ scale: 1.05, backgroundColor: '#16a34a' }}
-              whileTap={{ scale: 0.95 }}
-              transition={springConfig}
+              className="text-sm bg-green-600 md:hover:bg-green-700 transition duration-150 ease-in-out text-white py-2 px-4 rounded-full border-2 border-white z-10 whitespace-nowrap"
             >
               {copied ? 'Copied!' : <CopyIcon />}
-            </motion.button>
+            </button>
             <div className='text-xs sm:text-sm md:text-base overflow-x-auto whitespace-nowrap font-custom'>
               coming soon...
             </div>
