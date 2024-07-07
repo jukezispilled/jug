@@ -26,7 +26,7 @@ function App() {
   return (
     <motion.div>
       <motion.div className="h-screen w-screen flex justify-center items-center bg-[#F7EAD8]">
-        <div className="absolute top-7 right-7 flex flex-col items-center z-10">
+        <div className="absolute top-5 right-5 md:top-7 md:right-7 flex flex-col items-center z-10">
           <div className="flex flex-row">
             <motion.a 
               href="https://x.com/" 
@@ -34,7 +34,7 @@ function App() {
               whileHover={{ scale: 1.1 }}
               transition={springConfig}
             >
-              <img src={Xlogo} alt="Xlogo" className="w-12 h-12 rounded-md" />
+              <img src={Xlogo} alt="Xlogo" className="w-8 h-8 md:w-12 md:h-12 rounded-md" />
             </motion.a>
             <motion.a 
               href="https://t.me/" 
@@ -42,7 +42,7 @@ function App() {
               whileHover={{ scale: 1.1 }}
               transition={springConfig}
             >
-              <img src={TG} alt="Tg logo" className="w-12 h-12" />
+              <img src={TG} alt="Tg logo" className="w-8 h-8 md:w-12 md:h-12" />
             </motion.a>
           </div>
         </div>
