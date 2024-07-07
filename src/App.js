@@ -17,10 +17,10 @@ function App() {
   const { scrollYProgress } = useScroll();
 
   const memesY = useTransform(scrollYProgress, [0.2, 0.4], [50, 0]);
-  const memesOpacity = useTransform(scrollYProgress, [0.2, 0.4], [0, 1]);
+  const memesOpacity = useTransform(scrollYProgress, [0.2, 0.4], [0.05, 1]);
   
   const reportY = useTransform(scrollYProgress, [0.6, 0.8], [50, 0]);
-  const reportOpacity = useTransform(scrollYProgress, [0.6, 0.8], [0, 1]);
+  const reportOpacity = useTransform(scrollYProgress, [0.6, 0.8], [0.05, 1]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText('soon...');
