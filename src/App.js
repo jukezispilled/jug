@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { motion } from 'framer-motion';
 import logo from './logo.svg';
 import './App.css';
 import Xlogo from "./XLogo.jpg";
@@ -14,13 +14,6 @@ const CopyIcon = () => (
 
 function App() {
   const [copied, setCopied] = useState(false);
-  const { scrollYProgress } = useScroll();
-
-  const memesY = useTransform(scrollYProgress, [0.2, 0.4], [50, 0]);
-  const memesOpacity = useTransform(scrollYProgress, [0.2, 0.4], [0.05, 1]);
-  
-  const reportY = useTransform(scrollYProgress, [0.6, 0.8], [50, 0]);
-  const reportOpacity = useTransform(scrollYProgress, [0.6, 0.8], [0.05, 1]);
 
   const handleCopy = () => {
     navigator.clipboard.writeText('soon...');
@@ -87,24 +80,12 @@ function App() {
           </div>
         </motion.div>
       </motion.div>
-      <motion.div className='h-screen w-screen flex justify-center items-center bg-[#f9f5f0]'>
-        <motion.img 
-          className='w-[60%]' 
-          src="memess.png"
-          alt="Memes"
-          style={{ y: memesY, opacity: memesOpacity }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        />
-      </motion.div>
-      <motion.div className='h-screen w-screen flex justify-center items-center bg-[#F7EAD8]'>
-        <motion.img 
-          className='h-[75%]' 
-          src="report.png"
-          alt="Report"
-          style={{ y: reportY, opacity: reportOpacity }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        />
-      </motion.div>
+      <div className='h-screen w-screen flex justify-center items-center bg-[#f9f5f0]'>
+        <img className='w-[60%]' src="memess.png" alt="Memes" />
+      </div>
+      <div className='h-screen w-screen flex justify-center items-center bg-[#F7EAD8]'>
+        <img className='h-[75%]' src="report.png" alt="Report" />
+      </div>
     </motion.div>
   );
 }
