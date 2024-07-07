@@ -48,7 +48,7 @@ function App() {
         </div>
         <div className='absolute top-[12.5%] md:top-[7.5%] text-6xl md:text-9xl font-custom'>
           <div className='relative'>smarty
-            <img className='absolute -top-8 -left-10 h-[10vh] md:h-[15vh]' src="grade.png" alt="Grade" />
+            <img className='absolute -top-8 -left-10 h-[12vh] md:h-[15vh]' src="grade.png" alt="Grade" />
           </div>
         </div>
         <motion.img
