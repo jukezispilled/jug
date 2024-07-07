@@ -77,11 +77,11 @@ function App() {
           </div>
         </motion.div>
       </motion.div>
-      <div className='h-screen w-screen flex justify-center items-center bg-[#f9f5f0]'>
-        <img className='w-[60%]' src="memess.png" alt="Memes" />
+      <div className='h-min py-[30%] md:py-0 md:h-screen w-screen flex justify-center items-center bg-[#f9f5f0]'>
+        <img className='w-[85%] md:w-[60%]' src="memess.png" alt="Memes" />
       </div>
-      <div className='h-screen w-screen flex justify-center items-center bg-[#F7EAD8]'>
-        <img className='h-[75%]' src="report.png" alt="Report" />
+      <div className='h-min py-[30%] md:py-0 md:h-screen w-screen flex justify-center items-center bg-[#F7EAD8]'>
+        <img className='w-[75%] md:w-[65%]' src="report.png" alt="Report" />
       </div>
     </motion.div>
   );
