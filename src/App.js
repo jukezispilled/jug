@@ -62,7 +62,7 @@ function App() {
           className='h-[50%]'
           src="smarty.png"
           alt="Smarty"
-          whileHover={{ scale: 1.05, rotate: 5 }}
+          whileHover={{ scale: 1.07, rotate: 7 }}
           transition={springConfig}
         />
         <motion.div 
