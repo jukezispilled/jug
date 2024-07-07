@@ -30,19 +30,19 @@ function App() {
           <div className="flex flex-row">
             <motion.a 
               href="https://x.com/" 
-              className="p-2"
+              className="p-1 md:p-2"
               whileHover={{ scale: 1.1 }}
               transition={springConfig}
             >
-              <img src={Xlogo} alt="Xlogo" className="w-8 h-8 md:w-12 md:h-12 rounded-md" />
+              <img src={Xlogo} alt="Xlogo" className="w-10 h-10 md:w-12 md:h-12 rounded-md" />
             </motion.a>
             <motion.a 
               href="https://t.me/" 
-              className="p-2"
+              className="p-1 md:p-2"
               whileHover={{ scale: 1.1 }}
               transition={springConfig}
             >
-              <img src={TG} alt="Tg logo" className="w-8 h-8 md:w-12 md:h-12" />
+              <img src={TG} alt="Tg logo" className="w-10 h-10 md:w-12 md:h-12" />
             </motion.a>
           </div>
         </div>
