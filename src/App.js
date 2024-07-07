@@ -78,7 +78,7 @@ function App() {
         </motion.div>
       </motion.div>
       <div className='h-min py-[30%] md:py-0 md:h-screen w-screen flex justify-center items-center bg-[#f9f5f0]'>
-        <img className='w-[85%] md:w-[60%]' src="memess.png" alt="Memes" />
+        <img className='w-[85%] md:w-[60%] md:hover:scale-105 transition duration-300 ease-in-out' src="memess.png" alt="Memes" />
       </div>
       <div className='h-min py-[30%] md:py-0 md:h-screen w-screen flex justify-center items-center bg-[#F7EAD8]'>
         <img className='w-[75%] md:w-[55%]' src="report.png" alt="Report" />
