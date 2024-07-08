@@ -16,7 +16,7 @@ function App() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('soon...');
+    navigator.clipboard.writeText('2n9nLiE4Fw35fUCLELBxxCRDhcNEMciMJmpzb3wApump');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -29,7 +29,7 @@ function App() {
         <div className="absolute top-5 right-5 md:top-7 md:right-7 flex flex-col items-center z-10">
           <div className="flex flex-row">
             <motion.a 
-              href="https://x.com/" 
+              href="https://x.com/AngelCatCTO" 
               className="p-1 md:p-2"
               whileHover={{ scale: 1.1 }}
               transition={springConfig}
@@ -37,7 +37,7 @@ function App() {
               <img src={Xlogo} alt="Xlogo" className="w-10 h-10 md:w-12 md:h-12 rounded-md" />
             </motion.a>
             <motion.a 
-              href="https://t.me/" 
+              href="https://t.me/angelcatsol" 
               className="p-1 md:p-2"
               whileHover={{ scale: 1.1 }}
               transition={springConfig}
@@ -46,15 +46,13 @@ function App() {
             </motion.a>
           </div>
         </div>
-        <div className='absolute top-[12.5%] md:top-[7.5%] text-6xl md:text-9xl font-custom'>
-          <div className='relative'>smarty
-            <img className='absolute -top-8 -left-10 h-[12vh] md:h-[15vh]' src="grade.png" alt="Grade" />
-          </div>
+        <div className='absolute top-[12.5%] md:top-[7.5%] text-7xl md:text-[150px] font-custom'>
+          <div className='relative'>Angel Cat</div>
         </div>
         <motion.img
-          className='h-[50%]'
-          src="smarty.png"
-          alt="Smarty"
+          className='h-[40%] rounded-xl border-yellow-300 border-4'
+          src="ACAT3.png"
+          alt="ACAT"
           whileHover={{ scale: 1.07, rotate: 7 }}
           transition={springConfig}
         />
@@ -67,22 +65,16 @@ function App() {
           <div className='flex flex-col sm:flex-row justify-center bg-slate-100 rounded-xl md:rounded-full z-10 items-center gap-1 md:gap-3 px-5 py-3 max-w-full border-2 border-slate-400'>
             <button
               onClick={handleCopy}
-              className="text-sm bg-green-600 md:hover:bg-green-700 transition duration-150 ease-in-out text-white py-2 px-4 rounded-full border-2 border-white z-10 whitespace-nowrap"
+              className="text-sm bg-yellow-400 md:hover:bg-yellow-500 transition duration-150 ease-in-out text-white py-2 px-4 rounded-full border-2 border-white z-10 whitespace-nowrap"
             >
               {copied ? 'Copied!' : <CopyIcon />}
             </button>
-            <div className='text-xs sm:text-sm md:text-base overflow-x-auto whitespace-nowrap font-custom'>
-              coming soon...
+            <div className='text-xs md:text-xl overflow-x-auto whitespace-nowrap'>
+              2n9nLiE4Fw35fUCLELBxxCRDhcNEMciMJmpzb3wApump
             </div>
           </div>
         </motion.div>
       </motion.div>
-      <div className='h-min py-[30%] md:py-0 md:h-screen w-screen flex justify-center items-center bg-[#f9f5f0]'>
-        <img className='w-[85%] md:w-[60%] md:hover:scale-105 transition duration-300 ease-in-out' src="memess.png" alt="Memes" />
-      </div>
-      <div className='h-min py-[30%] md:py-0 md:h-screen w-screen flex justify-center items-center bg-[#F7EAD8]'>
-        <img className='w-[75%] md:w-[55%]' src="report.png" alt="Report" />
-      </div>
     </motion.div>
   );
 }
