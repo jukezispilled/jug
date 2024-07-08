@@ -81,7 +81,7 @@ function App() {
             >
               {copied ? 'Copied!' : <CopyIcon />}
             </button>
-            <div className='text-xs md:text-xl overflow-x-auto whitespace-nowrap'>
+            <div className='text-xs md:text-xl overflow-x-auto whitespace-nowrap font-custom'>
             coming soon...
             </div>
           </div>
