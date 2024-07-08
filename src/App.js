@@ -5,6 +5,7 @@ import './App.css';
 import Xlogo from "./XLogo.jpg";
 import TG from "./TG.png";
 import Marquee from 'react-fast-marquee';
+import backgroundImage from './bg.webp';
 
 const CopyIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -25,7 +26,13 @@ function App() {
 
   return (
     <motion.div>
-      <motion.div className="h-screen w-screen flex justify-center items-center bg-[#F7EAD8]">
+      <motion.div className="h-screen w-screen flex justify-center items-center bg-[#F7EAD8]"
+              style={{
+                backgroundImage: `url(${backgroundImage})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center center',
+                backgroundSize: 'cover',
+              }}>
         <div className="absolute top-5 right-5 md:top-7 md:right-7 flex flex-col items-center z-10">
           <div className="flex flex-row">
             <motion.a 
