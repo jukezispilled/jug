@@ -5,7 +5,7 @@ import './App.css';
 import Xlogo from "./XLogo.jpg";
 import TG from "./TG.png";
 import Marquee from 'react-fast-marquee';
-import backgroundImage from './bg4.jpeg';
+import backgroundImage from './bg5.png';
 
 const CopyIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -18,7 +18,7 @@ function App() {
   const [modalVisible, setModalVisible] = useState(true);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('2f6ufqb12oaXeXbHGRkYT3DLKtY89NVLsmZZ7Dcwpump');
+    navigator.clipboard.writeText('oming soon...');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -31,11 +31,17 @@ function App() {
 
   return (
     <motion.div>
-      <motion.div className="h-screen w-screen flex justify-center items-center bg-white">
+      <motion.div className="h-screen w-screen flex justify-center items-center bg-white"
+              style={{
+                backgroundImage: `url(${backgroundImage})`,
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center center',
+                backgroundSize: 'cover',
+              }}>
         <div className="absolute top-5 right-5 md:top-7 md:right-7 flex flex-col items-center z-10">
           <div className="flex flex-row">
             <motion.a 
-              href="https://x.com/mimiCTOreal" 
+              href="https://x.com/jugsolana" 
               className="p-1 md:p-2"
               whileHover={{ scale: 1.1 }}
               transition={springConfig}
@@ -43,7 +49,7 @@ function App() {
               <img src={Xlogo} alt="Xlogo" className="w-10 h-10 md:w-12 md:h-12 rounded-md" />
             </motion.a>
             <motion.a 
-              href="t.me/mimiCTOreal" 
+              href="https://t.me/jugsolana" 
               className="p-1 md:p-2"
               whileHover={{ scale: 1.1 }}
               transition={springConfig}
@@ -53,12 +59,12 @@ function App() {
           </div>
         </div>
         <div className='absolute top-[12.5%] md:top-[7.5%] text-7xl md:text-[150px] font-bold text-yellow-300 font-custom'>
-          <div className='relative'>mimi</div>
+          <div className='relative'>jug</div>
         </div>
         <motion.img
           className='h-[40%] rounded-xl border-yellow-300 border-4'
-          src="mimi.jpg"
-          alt="ACAT"
+          src="jug.png"
+          alt="jug"
           whileHover={{ scale: 1.07, rotate: 7 }}
           transition={springConfig}
         />
@@ -76,7 +82,7 @@ function App() {
               {copied ? 'Copied!' : <CopyIcon />}
             </button>
             <div className='text-xs md:text-xl overflow-x-auto whitespace-nowrap'>
-            2f6ufqb12oaXeXbHGRkYT3DLKtY89NVLsmZZ7Dcwpump
+            coming soon...
             </div>
           </div>
         </motion.div>
