@@ -15,11 +15,16 @@ const CopyIcon = () => (
 
 function App() {
   const [copied, setCopied] = useState(false);
+  const [modalVisible, setModalVisible] = useState(true);
 
   const handleCopy = () => {
     navigator.clipboard.writeText('2n9nLiE4Fw35fUCLELBxxCRDhcNEMciMJmpzb3wApump');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleEnter = () => {
+    setModalVisible(false);
   };
 
   const springConfig = { stiffness: 300, damping: 30 };
@@ -33,6 +38,31 @@ function App() {
                 backgroundPosition: 'center center',
                 backgroundSize: 'cover',
               }}>
+                      {modalVisible && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+              <div className="bg-white p-8 rounded-xl text-center">
+                <h1 className="text-3xl mb-4 font-bold">Commandments</h1>
+                <div className="text-left mb-4">
+                  <p>1. Thou shall not jeet</p>
+                  <p>2. Thou shall not farm</p>
+                  <p>3. Thou shall not swingtrade</p>
+                  <p>4. Thou shall not fud</p>
+                  <p>5. Thou shall work for your bags</p>
+                  <p>6. Thou shall raid</p>
+                  <p>7. Thou shall be active in the community</p>
+                  <p>8. Thou shall pray to $ACAT</p>
+                  <p>9. Thou shall shill $ACAT</p>
+                  <p>10. Thou shall hold $ACAT till the gates of heaven</p>
+                </div>
+                <button 
+                  onClick={handleEnter} 
+                  className="bg-yellow-400 text-white py-2 px-4 rounded-full text-xl"
+                >
+                  Enter
+                </button>
+              </div>
+            </div>
+          )}
         <div className="absolute top-5 right-5 md:top-7 md:right-7 flex flex-col items-center z-10">
           <div className="flex flex-row">
             <motion.a 
@@ -58,7 +88,7 @@ function App() {
         </div>
         <motion.img
           className='h-[40%] rounded-xl border-yellow-300 border-4'
-          src="ACAT3.png"
+          src="ACAT4.jpg"
           alt="ACAT"
           whileHover={{ scale: 1.07, rotate: 7 }}
           transition={springConfig}
