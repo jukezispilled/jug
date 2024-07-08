@@ -5,7 +5,7 @@ import './App.css';
 import Xlogo from "./XLogo.jpg";
 import TG from "./TG.png";
 import Marquee from 'react-fast-marquee';
-import backgroundImage from './bg1.webp';
+import backgroundImage from './bg4.jpeg';
 
 const CopyIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
@@ -53,7 +53,7 @@ function App() {
             </motion.a>
           </div>
         </div>
-        <div className='absolute top-[12.5%] md:top-[7.5%] text-7xl md:text-[150px] font-custom'>
+        <div className='absolute top-[12.5%] md:top-[7.5%] text-7xl md:text-[150px] font-bold text-white font-custom'>
           <div className='relative'>Angel Cat</div>
         </div>
         <motion.img
@@ -69,10 +69,10 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >
-          <div className='flex flex-col sm:flex-row justify-center bg-slate-100 rounded-xl md:rounded-full z-10 items-center gap-1 md:gap-3 px-5 py-3 max-w-full border-2 border-slate-400'>
+          <div className='flex flex-col sm:flex-row justify-center bg-slate-100 rounded-xl md:rounded-full z-10 items-center gap-1 md:gap-3 px-5 py-3 max-w-full border-2 border-yellow-300'>
             <button
               onClick={handleCopy}
-              className="text-sm bg-yellow-400 md:hover:bg-yellow-500 transition duration-150 ease-in-out text-white py-2 px-4 rounded-full border-2 border-white z-10 whitespace-nowrap"
+              className="text-sm bg-yellow-400 md:hover:bg-yellow-500 transition duration-150 ease-in-out text-white py-2 px-4 rounded-full border-2 border-yellow-300 z-10 whitespace-nowrap"
             >
               {copied ? 'Copied!' : <CopyIcon />}
             </button>
