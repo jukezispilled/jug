@@ -40,7 +40,7 @@ function App() {
               }}>
                       {modalVisible && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-              <div className="bg-white p-8 rounded-xl text-center">
+              <div className="bg-white p-8 rounded-xl text-center mx-[5%]">
                 <h1 className="text-3xl mb-4 font-bold">Commandments</h1>
                 <div className="text-left mb-4">
                   <p>1. Thou shall not jeet</p>
