@@ -58,7 +58,7 @@ function App() {
                   onClick={handleEnter} 
                   className="bg-yellow-400 text-white py-2 px-4 rounded-full text-xl font-semibold"
                 >
-                  ENTER
+                  I OBEY
                 </button>
               </div>
             </div>
