@@ -77,7 +77,6 @@ function App() {
             </button>
             <div className='text-xs md:text-xl overflow-x-auto whitespace-nowrap'>
             2f6ufqb12oaXeXbHGRkYT3DLKtY89NVLsmZZ7Dcwpump
-
             </div>
           </div>
         </motion.div>
