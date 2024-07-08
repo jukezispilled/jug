@@ -18,7 +18,7 @@ function App() {
   const [modalVisible, setModalVisible] = useState(true);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('2n9nLiE4Fw35fUCLELBxxCRDhcNEMciMJmpzb3wApump');
+    navigator.clipboard.writeText('2f6ufqb12oaXeXbHGRkYT3DLKtY89NVLsmZZ7Dcwpump');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -31,42 +31,11 @@ function App() {
 
   return (
     <motion.div>
-      <motion.div className="h-screen w-screen flex justify-center items-center bg-[#F7EAD8]"
-              style={{
-                backgroundImage: `url(${backgroundImage})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center center',
-                backgroundSize: 'cover',
-              }}>
-                      {modalVisible && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-              <div className="bg-white p-8 rounded-xl text-center mx-[5%]">
-                <h1 className="text-3xl mb-4 font-bold">Commandments</h1>
-                <div className="text-left mb-4">
-                  <p>1. Thou shall not jeet</p>
-                  <p>2. Thou shall not farm</p>
-                  <p>3. Thou shall not swingtrade</p>
-                  <p>4. Thou shall not fud</p>
-                  <p>5. Thou shall work for your bags</p>
-                  <p>6. Thou shall raid</p>
-                  <p>7. Thou shall be active in the community</p>
-                  <p>8. Thou shall pray to $ACAT</p>
-                  <p>9. Thou shall shill $ACAT</p>
-                  <p>10. Thou shall hold $ACAT till the gates of heaven</p>
-                </div>
-                <button 
-                  onClick={handleEnter} 
-                  className="bg-yellow-400 text-white py-2 px-4 rounded-full text-xl font-semibold"
-                >
-                  I OBEY
-                </button>
-              </div>
-            </div>
-          )}
+      <motion.div className="h-screen w-screen flex justify-center items-center bg-white">
         <div className="absolute top-5 right-5 md:top-7 md:right-7 flex flex-col items-center z-10">
           <div className="flex flex-row">
             <motion.a 
-              href="https://x.com/AngelCatCTO" 
+              href="https://x.com/mimiCTOreal" 
               className="p-1 md:p-2"
               whileHover={{ scale: 1.1 }}
               transition={springConfig}
@@ -74,7 +43,7 @@ function App() {
               <img src={Xlogo} alt="Xlogo" className="w-10 h-10 md:w-12 md:h-12 rounded-md" />
             </motion.a>
             <motion.a 
-              href="https://t.me/angelcatsol" 
+              href="t.me/mimiCTOreal" 
               className="p-1 md:p-2"
               whileHover={{ scale: 1.1 }}
               transition={springConfig}
@@ -83,12 +52,12 @@ function App() {
             </motion.a>
           </div>
         </div>
-        <div className='absolute top-[12.5%] md:top-[7.5%] text-7xl md:text-[150px] font-bold text-white font-custom'>
-          <div className='relative'>Angel Cat</div>
+        <div className='absolute top-[12.5%] md:top-[7.5%] text-7xl md:text-[150px] font-bold text-yellow-300 font-custom'>
+          <div className='relative'>mimi</div>
         </div>
         <motion.img
           className='h-[40%] rounded-xl border-yellow-300 border-4'
-          src="ACAT4.jpg"
+          src="mimi.jpg"
           alt="ACAT"
           whileHover={{ scale: 1.07, rotate: 7 }}
           transition={springConfig}
@@ -107,7 +76,8 @@ function App() {
               {copied ? 'Copied!' : <CopyIcon />}
             </button>
             <div className='text-xs md:text-xl overflow-x-auto whitespace-nowrap'>
-              2n9nLiE4Fw35fUCLELBxxCRDhcNEMciMJmpzb3wApump
+            2f6ufqb12oaXeXbHGRkYT3DLKtY89NVLsmZZ7Dcwpump
+
             </div>
           </div>
         </motion.div>
