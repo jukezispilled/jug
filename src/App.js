@@ -5,7 +5,7 @@ import './App.css';
 import Xlogo from "./XLogo.jpg";
 import TG from "./TG.png";
 import Marquee from 'react-fast-marquee';
-import backgroundImage from './bg.webp';
+import backgroundImage from './bg1.webp';
 
 const CopyIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
